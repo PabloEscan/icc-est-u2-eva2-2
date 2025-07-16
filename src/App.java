@@ -1,5 +1,7 @@
 import java.util.List;
+import java.util.Map;
 
+import controllers.LibroController;
 import models.Book;
 
 public class App {
@@ -31,5 +33,9 @@ public class App {
                 new Book("Ciberseguridad", "Pedro León", 2023),
                 new Book("Blockchain", "Marta Ríos", 2021),
                 new Book("Machine Learning", "Cristina Gómez", 2022));
+
+        LibroController lC = new LibroController();
+        Map<Book, Book> mapaLibros = lC.procesarLibros(libros);
+        System.out.println(mapaLibros);
     }
 }
