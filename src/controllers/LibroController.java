@@ -14,11 +14,11 @@ public class LibroController {
         Set<Book> conjuntoOrdenado = new TreeSet<>(new BookComparator());
         conjuntoOrdenado.addAll(libros);
 
-        Map<Book, Book> resultado = new LinkedHashMap<>();
+        Map<Book, Book> mapFinal = new LinkedHashMap<>();
         for (Book libro : conjuntoOrdenado) {
-            resultado.put(libro, libro);
+            mapFinal.put(libro, libro);
         }
 
-        return resultado;
+        return mapFinal;
     }
 }
